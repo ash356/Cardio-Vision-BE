@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "34caafe5-0487-42f6-9791-a5955ec5e68e",
+		"name": "Cardio-Vision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"firstName\": \"Ahmed\",\r\n      \"lastName\": \"Ashour\",\r\n      \"email\": \"ashourahmed7070@gmail.com\",\r\n      \"password\": \"Ahmed@1234\",\r\n      \"cPassword\":\"Ahmed@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cardio-vision.vercel.app/auth/sign-up",
+							"protocol": "https",
+							"host": [
+								"cardio-vision",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ashourahmed203r0@gmail.com\",\r\n      \"password\": \"Ahmed@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/log-in",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"log-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"ashourahmed2030@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/forgetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"ashourahmed2030@gmail.com\",\r\n      \"resetCode\":\"uGgk06\",\r\n      \"newPassword\":\"Test@1234\",\r\n      \"cPassword\":\"Test@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/resetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Admin",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmMyMzRhMjEzM2M2ZGJjMDM2OTBhYSIsImVtYWlsIjoiYXNob3VyYWhtZWQ3MDcwQGdtYWlsLmNvbSIsInN0YXR1cyI6Ik9uTGluZSIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4NTYzMzMwOSwiZXhwIjoxNjg1NzE5NzA5fQ.LVrQVltEVmytfvjhyNB4YobVrf27YdAgT2692uN5Bfg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"ashourahmed2030@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/setAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"setAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmMyMzRhMjEzM2M2ZGJjMDM2OTBhYSIsImVtYWlsIjoiYXNob3VyYWhtZWQ3MDcwQGdtYWlsLmNvbSIsInN0YXR1cyI6Ik9uTGluZSIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4NTYzMzMwOSwiZXhwIjoxNjg1NzE5NzA5fQ.LVrQVltEVmytfvjhyNB4YobVrf27YdAgT2692uN5Bfg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\": \"6478b8e2723ba4ed17f36c1d\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/deleteUser",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmMyMzRhMjEzM2M2ZGJjMDM2OTBhYSIsImVtYWlsIjoiYXNob3VyYWhtZWQ3MDcwQGdtYWlsLmNvbSIsInN0YXR1cyI6Ik9uTGluZSIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4NTYzMzMwOSwiZXhwIjoxNjg1NzE5NzA5fQ.LVrQVltEVmytfvjhyNB4YobVrf27YdAgT2692uN5Bfg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"ashourahmed2030@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/getUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"getUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTI4YWIwZDY1NGZhMGZhNzJkNDA1OCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MzEzMzIyNywiZXhwIjoxNjgzMjE5NjI3fQ.8E-yKWPcNzLMQ5sSftKbWknM1EYOvX-bsRv5kTjmI-k",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/auth/log-out",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"log-out"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTY0ZGM2NDc5NTllOTY1MjVkMjMxZiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4NDgxMzg1NSwiZXhwIjoxNjg0OTAwMjU1fQ.deSdoGz9tx2b1AC96P2etEz3Jw2Nbkc0MYZ3UR3KRJE",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Pic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTY0ZGM2NDc5NTllOTY1MjVkMjMxZiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4NDgxMzg1NSwiZXhwIjoxNjg0OTAwMjU1fQ.deSdoGz9tx2b1AC96P2etEz3Jw2Nbkc0MYZ3UR3KRJE",
+								"type": "default"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Ashour/Desktop/Electronics/iphone11.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/user/profilePic",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profilePic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTY0ZGM2NDc5NTllOTY1MjVkMjMxZiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4NDgxMzg1NSwiZXhwIjoxNjg0OTAwMjU1fQ.deSdoGz9tx2b1AC96P2etEz3Jw2Nbkc0MYZ3UR3KRJE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Very Goog\",\r\n    \"lastName\": \"Very Goog\",\r\n    \"phone\": \"+201234567899\",\r\n    \"gender\":\"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/user/update",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTVlYWIwMjkwOGZmNDNlOTZhMWI2ZCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MzM1MjM3MSwiZXhwIjoxNzE0ODg4MzcxfQ.qEp6Osem1_5yBIMwCnmb3uFa9sItA9Bsv0hI3iiYKes",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"Test@1234\",\r\n    \"newPassword\":\"Ahmed@1234\",\r\n    \"cPassword\":\"Ahmed@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/user/updatePassword",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Cardio-Vision_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTVlYWIwMjkwOGZmNDNlOTZhMWI2ZCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MzM1MjM3MSwiZXhwIjoxNzE0ODg4MzcxfQ.qEp6Osem1_5yBIMwCnmb3uFa9sItA9Bsv0hI3iiYKes",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjljMTI3YmUxYTJmZTQ0ZGRmOTAwNCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzMxNjk2NSwiZXhwIjoxNjc3MzIwNTY1fQ.GY6Zu6IJkyrGjSJfMmoIspK19iqkKYj_pbImq1RCzHk",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/home",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Share Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Library_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDZmMDczZTljOTNlMzlmNzhkOWQxMiIsImlzTG9nZ2VkSW4iOnRydWUsInJ1bGUiOiJVc2VyIiwiaWF0IjoxNjc4MTc2Mzc0LCJleHAiOjE2NzgyNjI3NzR9.aQMyxl6-z82WF2L7qx7KrTQPxbw49SH8FinYDZiKhRM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/profile/640c37e561165d92370e66ed",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profile",
+								"640c37e561165d92370e66ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
