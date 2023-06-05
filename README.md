@@ -38,7 +38,7 @@ Cardio Vision is designed to help users track and manage their cardiovascular he
 - Node Mailer: Sending email notifications.
 The following tools were used in the development of Cardio Vision:
 
-- Postman: Use the [Postman Collection](/path/to/Cardio-Vision.postman_collection.json) to interact with the API endpoints.
+- Postman: Use the [Postman Collection](/Cardio-Vision.postman_collection.json) to interact with the API endpoints.
 
 
 ## Usage
