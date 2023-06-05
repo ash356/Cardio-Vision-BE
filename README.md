@@ -3,16 +3,6 @@
 Cardio Vision is a web application developed using Node.js, Express.js, and MongoDB. It provides a platform for tracking cardiovascular health and monitoring progress. The project incorporates several technologies including Postman, Cloudinary for image storage, JWT for authentication, CORS for handling cross-origin requests, validation for data integrity, error handling, and Node Mailer for sending email notifications.
 
 
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Tools](#tools)
-- [Usage](#usage)
-- [Installation](#installation)
-
-
-
 ## About
 
 Cardio Vision is designed to help users track and manage their cardiovascular health. It allows users to input and store relevant data, view progress charts, and receive personalized insights. The project aims to provide an intuitive and user-friendly experience for monitoring and improving cardiovascular well-being.
