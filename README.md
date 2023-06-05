@@ -1,51 +1,62 @@
-# Cardio-Vision-BE
+# Cardio Vision
 
-This repository contains the Cardio-Vision Backed. Please follow the instructions below to set up and run the project.
+Cardio Vision is a web application developed using Node.js, Express.js, and MongoDB. It provides a platform for tracking cardiovascular health and monitoring progress. The project incorporates several technologies including Postman, Cloudinary for image storage, JWT for authentication, CORS for handling cross-origin requests, validation for data integrity, error handling, and Node Mailer for sending email notifications.
 
-## Tools and Technologies Used
+
+## Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Tools](#tools)
+- [Usage](#usage)
+- [Installation](#installation)
+
+
+
+## About
+
+Cardio Vision is designed to help users track and manage their cardiovascular health. It allows users to input and store relevant data, view progress charts, and receive personalized insights. The project aims to provide an intuitive and user-friendly experience for monitoring and improving cardiovascular well-being.
+
+## Features
+
+- User registration and authentication using JWT
+- Input and storage of cardiovascular health data
+- Data visualization and progress tracking
+- Integration with Cloudinary for image storage
+- Error handling and validation for data integrity
+- Email notifications using Node Mailer
+
+
+## Tools
 
 - Node.js
 - Express.js
-- MySQL
-- Sequelize
-- Postman
+- Cloudinary: Image storage and management platform.
+- JWT: JSON Web Token for user authentication.
+- CORS: Handling cross-origin requests.
+- Validation: Ensuring data integrity and input validation.
+- Node Mailer: Sending email notifications.
+The following tools were used in the development of Cardio Vision:
 
-## Installation
+- Postman: Use the [Postman Collection](/path/to/postman_collection.json) to interact with the API endpoints.
 
-To set up the project on your local machine, follow these steps:
-
-1. Clone the repository:
-- git clone [repository_url]
-
-2. Install the dependencies:
-- npm install
-
-3. Configure the database:
-- Open the `connection.js` file and update the MySQL database credentials.
-
-4. Run the application:
-- npm start
 
 ## Usage
 
-1. API Documentation:
-- Refer to the API documentation provided by EasyCash for details on available endpoints, request payloads, parameters, and response formats.
+1. Register a new user account or log in with existing credentials.
+2. Access the different features and functionalities of the application, such as adding cardiovascular data, viewing charts, and managing account settings.
+3. Explore the various options available to track and monitor cardiovascular health.
 
-2. Postman Collection:
-- Import the provided Postman collection file (`EasyCash.postman_collection.json`) into Postman.
-- Configure the environment variables in Postman:
-  - Set the `{{url}}` variable to the URL where the application is running.
+## Installation
 
-3. Make API requests:
-- Use the imported Postman collection to make requests to the available API endpoints.
-- Follow the API documentation to provide the necessary request payloads and parameters.
-
-4. Usage with Postman File:
-- Attached to this project is a Postman collection file (`EasyCash.postman_collection.json`).
-- Import this file into Postman to have easy access to preconfigured API requests.
-
+1. Clone the repository.
+2. Install the required dependencies using `npm install`.
+3. Set up a MongoDB database and provide the connection details in a `.env` file.
+4. Configure Cloudinary credentials in the `.env` file.
+5. Start the server using `npm start`.
 
 ## Note
 
 Make sure to exclude the `node_modules` directory by adding it to the `.gitignore` file.
+
 
